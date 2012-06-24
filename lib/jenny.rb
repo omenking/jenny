@@ -1,6 +1,6 @@
-require 'admin_panel/version'
-require 'admin_panel/jenny_helper'
+require 'jenny/version'
+require 'jenny/jenny_helper'
 
-module AdminPanel
+module Jenny
   ActionView::Base.send :include, JennyHelper
 end
