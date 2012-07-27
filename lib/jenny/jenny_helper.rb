@@ -292,7 +292,7 @@ module JennyHelper
     render_options[:locals] = options
     if args.length >= 2
       render_options[:collection] = args[1]
-      render_options[:as] = options.delete :as
+      render_options[:as]         = options.delete :as if options[:as]
     end
 
     render_html = if render_options.key?(:collection) && render_options[:collection].empty?
